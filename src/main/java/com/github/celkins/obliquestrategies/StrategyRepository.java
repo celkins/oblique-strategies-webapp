@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 public class StrategyRepository {
@@ -132,7 +131,7 @@ public class StrategyRepository {
     };
 
     public List<String> randomStrategies() {
-        List<String> randomStrategies = Arrays.stream(strategies).collect(Collectors.toList());
+        List<String> randomStrategies = Arrays.asList(strategies);
         Collections.shuffle(randomStrategies);
         return randomStrategies;
     }
