@@ -1,0 +1,10 @@
+management:
+  contextPath: /management
+
+---
+
+spring:
+  profiles: default
+
+server:
+  port: 8080
